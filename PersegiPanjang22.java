@@ -2,23 +2,24 @@ public class PersegiPanjang22 {
     public int panjang;
     public int lebar;
 
-    public static void main(String[] args) {
-        PersegiPanjang22[] arrayOfPersegiPanjang22 = new PersegiPanjang22[3];
+    public PersegiPanjang22() {
+        panjang = 0;
+        lebar = 0;
+    }
+    
+    public PersegiPanjang22(int p, int l){
+        panjang = p;
+        lebar = l;
+    }
 
-        arrayOfPersegiPanjang22[0] = new PersegiPanjang22();
-        arrayOfPersegiPanjang22[0].panjang = 110;
-        arrayOfPersegiPanjang22[0].lebar = 30;
+    public void cetakInfo(){
+        System.out.print("Panjang: " + panjang + ", Lebar: " + lebar + ", " );
+        hitungLuasKeliling();
+    }
 
-        arrayOfPersegiPanjang22[1] = new PersegiPanjang22();
-        arrayOfPersegiPanjang22[1].panjang = 80;
-        arrayOfPersegiPanjang22[1].lebar = 40;
-
-        arrayOfPersegiPanjang22[2] = new PersegiPanjang22();
-        arrayOfPersegiPanjang22[2].panjang = 100;
-        arrayOfPersegiPanjang22[2].lebar = 20;
-
-        System.out.println("Persegi panjang ke-1, panjang: " + arrayOfPersegiPanjang22[0].panjang + ", lebar: " + arrayOfPersegiPanjang22[0].lebar);
-        System.out.println("Persegi panjang ke-2, panjang: " + arrayOfPersegiPanjang22[1].panjang + ", lebar: " + arrayOfPersegiPanjang22[1].lebar);
-        System.out.println("Persegi panjang ke-3, panjang: " + arrayOfPersegiPanjang22[2].panjang + ", lebar: " + arrayOfPersegiPanjang22[2].lebar);
+    public void hitungLuasKeliling(){
+        int luas = panjang * lebar;
+        int keliling = 2 * (panjang + lebar); 
+        System.out.println("Luas: " + luas + ", Keliling: " + keliling);
     }
 }
